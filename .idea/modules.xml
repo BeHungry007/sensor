@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/kstream/KafkaStreamAPI.iml" filepath="$PROJECT_DIR$/kstream/KafkaStreamAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestDemo/TestDemo.iml" filepath="$PROJECT_DIR$/TestDemo/TestDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sensor.iml" filepath="$PROJECT_DIR$/.idea/sensor.iml" />
+    </modules>
+  </component>
+</project>
