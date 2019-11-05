@@ -6,8 +6,8 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/kstream/pom.xml" />
         <option value="$PROJECT_DIR$/TestDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/kstream/pom.xml" />
       </list>
     </option>
   </component>
