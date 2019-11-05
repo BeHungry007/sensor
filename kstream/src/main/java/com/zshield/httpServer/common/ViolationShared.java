@@ -36,6 +36,7 @@ public class ViolationShared {
 
     public void retainAll(Set<Metric> metric) {
         if (metric != null && metric.size() > 0) {
+            //metric是否包含所有的this.metrics的数据。
             metric.retainAll(this.metrics);
         }
     }

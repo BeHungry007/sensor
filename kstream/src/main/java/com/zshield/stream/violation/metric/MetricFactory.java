@@ -41,6 +41,7 @@ public class MetricFactory {
     public Set<Metric> build(String log) {
         Set<Metric> metrics = new HashSet<>();
         JsonObject obj = jp.parse(log).getAsJsonObject();
+        //以log日志中的注解获取到注解value一致的class集合。
         Set<Class<?>> clazzs = formatToMetric.get(obj.get("FORMAT").getAsString());
         if (clazzs == null) {
             return null;

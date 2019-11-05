@@ -45,6 +45,7 @@ public class Stream {
         }
     }
 
+
     private void doWork() {
         topo.addSource("source", ParamAnalysisUtil.input_topic)
                 .addProcessor("pre_proc", () -> new PreProc(), "source")

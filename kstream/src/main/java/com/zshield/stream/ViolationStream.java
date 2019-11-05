@@ -27,7 +27,10 @@ public class ViolationStream {
 
     public ViolationStream() {
         topo = new Topology();
+        //Create an in-memory {@link KeyValueBytesStoreSupplier}.
+        // @param name  name of the store (cannot be {@code null})
         KeyValueBytesStoreSupplier tsup = Stores.inMemoryKeyValueStore("vioQstore");
+        //Creates a {@link StoreBuilder} that can be used to build a {@link KeyValueStore}.
         builder = Stores.keyValueStoreBuilder(tsup, Serdes.String(), Serdes.String());
     }
 

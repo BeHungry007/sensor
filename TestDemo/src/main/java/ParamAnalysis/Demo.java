@@ -6,7 +6,9 @@ import org.junit.Test;
 
 import java.time.LocalTime;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class Demo {
     public static void main(String[] args) throws ParseException {
@@ -43,5 +45,23 @@ public class Demo {
         map.put("1", son);
         son.id = "b";
         System.out.println(map.get("1").id);
+    }
+
+    @Test
+    public void test04(){
+        Set<Integer> s1 = new HashSet<>();
+        Set<Integer> s2 = new HashSet<>();
+        s1.add(1);
+        s1.add(2);
+        s2.add(2);
+        System.out.println(s1.retainAll(s2));
+        System.out.println(s1);
+    }
+
+    @Test
+    public void test05(){
+        String s1 = "a";
+        String s2 = "a";
+        System.out.println(s1.compareTo(s2));
     }
 }
