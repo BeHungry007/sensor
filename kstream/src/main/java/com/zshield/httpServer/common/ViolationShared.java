@@ -16,6 +16,21 @@ public class ViolationShared {
 
     private ViolationShared() {}
 
+    private static class SingletonPatternHolder {
+        private static final ViolationShared violatrionShared = new ViolationShared();
+    }
+
+    public static ViolationShared getInstance() {
+        return SingletonPatternHolder.violatrionShared;
+    }
+
+    private boolean addMetric(Metric metric) {
+        if (metric != null) {
+            return this.metrics.add(metric);
+        }
+        return false;
+    }
+
     public Set<Detection> getDetections(String metricId) {
         return ruleIdToDetections.get(metricId);
     }
@@ -26,13 +41,9 @@ public class ViolationShared {
         }
     }
 
-    private static class SingletonPatternHolder {
-        private static final ViolationShared violatrionShared = new ViolationShared();
-    }
 
-    public static ViolationShared getInstance() {
-        return SingletonPatternHolder.violatrionShared;
-    }
+
+
 
     public void retainAll(Set<Metric> metric) {
         if (metric != null && metric.size() > 0) {
